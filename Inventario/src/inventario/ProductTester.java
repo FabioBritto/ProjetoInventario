@@ -44,17 +44,18 @@ public class ProductTester {
 		
 		Produto prod2 = new Produto(tempName,tempNumber,tempQuantidade,tempPreco,true);
 		
-		//Produto prod3 = new Produto("Sal",103,32,7.85);
-		//Produto prod4 = new Produto("Acúcar",104,23,10.35);
-		//Produto prod5 = new Produto("Refrigerante",105,83,7.99);
-		//Produto prod6 = new Produto("Leite",106,120,4.90);
+		Produto prod3 = new Produto("Sal",103,32,7.85,true);
+		Produto prod4 = new Produto("Acúcar",104,23,10.35,true);
+		Produto prod5 = new Produto("Refrigerante",105,83,7.99,true);
+		Produto prod6 = new Produto("Leite",106,120,4.90,true);
+		prod6.setAtivo(false);
 	
 		System.out.println(prod1.toString());
 		System.out.println("\n"+ prod2.toString());
-		//System.out.println("\n"+ prod3.toString());
-		//System.out.println("\n"+ prod4.toString());
-		//System.out.println("\n"+ prod5.toString());
-		//System.out.println("\n"+ prod6.toString());
+		System.out.println("\n"+ prod3.toString());
+		System.out.println("\n"+ prod4.toString());
+		System.out.println("\n"+ prod5.toString());
+		System.out.println("\n"+ prod6.toString());
 		
 		sc.close();
 	}

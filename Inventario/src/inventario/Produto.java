@@ -45,6 +45,9 @@ public class Produto {
 	public boolean getAtivo() {
 		return ativo;
 	}
+	public double getValorEstoque() {
+		return precoProduto * qtdeProduto;
+	}
 	/**
 	 * Esses métodos são MODIFICADORES. Utilizo eles pra setar os valores nas variáveis.
 	 * Eles são declarados com VOID pois não me retornam nenhum dado.
@@ -65,10 +68,18 @@ public class Produto {
 		this.ativo = ativo;
 	}
 	public String toString() {
+		String status;
+		if(ativo == true) {
+			status = "Ativo";
+		}
+		else {
+			status = "Descontinuado";
+		}
 		return "ID do Produto:\t" + idProduto +
 			   "\nNome do Produto:\t" + nomeProduto +
 			   "\nQuantidade em estoque:\t" + qtdeProduto +
 			   "\nPreço do Produto:\t" + precoProduto +
-			   "\nStatus do Produto:\t" + ativo;
+			   "\nValor do Estoque:\t" + getValorEstoque() +
+			   "\nStatus do Produto:\t" + status;
 	}
 }
