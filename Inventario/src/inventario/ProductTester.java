@@ -12,6 +12,7 @@ public class ProductTester {
 		int tempNumber;
 		int tempQuantidade;
 		double tempPreco;
+		boolean ativo;
 		
 		
 		System.out.println("Por favor, digite o nome do Produto:");
@@ -23,7 +24,8 @@ public class ProductTester {
 		System.out.println("Por último, por favor, declare o preço do Produto:");
 		tempPreco = sc.nextDouble();
 		
-		Produto prod1 = new Produto(tempName,tempNumber,tempQuantidade,tempPreco);
+		//Preciso descobrir como referenciar o "getAtivo".
+		Produto prod1 = new Produto(tempName,tempNumber,tempQuantidade,tempPreco,true);
 		
 		/*
 		 * Apesar de no meu caso, eu não ter passado pelo mesmo erro que o projeto preveu,
@@ -40,19 +42,19 @@ public class ProductTester {
 		System.out.println("Por último, por favor, declare o preço do Produto:");
 		tempPreco = sc.nextDouble();
 		
-		Produto prod2 = new Produto(tempName,tempNumber,tempQuantidade,tempPreco);
+		Produto prod2 = new Produto(tempName,tempNumber,tempQuantidade,tempPreco,true);
 		
-		Produto prod3 = new Produto("Sal",103,32,7.85);
-		Produto prod4 = new Produto("Acúcar",104,23,10.35);
-		Produto prod5 = new Produto("Refrigerante",105,83,7.99);
-		Produto prod6 = new Produto("Leite",106,120,4.90);
+		//Produto prod3 = new Produto("Sal",103,32,7.85);
+		//Produto prod4 = new Produto("Acúcar",104,23,10.35);
+		//Produto prod5 = new Produto("Refrigerante",105,83,7.99);
+		//Produto prod6 = new Produto("Leite",106,120,4.90);
 	
 		System.out.println(prod1.toString());
 		System.out.println("\n"+ prod2.toString());
-		System.out.println("\n"+ prod3.toString());
-		System.out.println("\n"+ prod4.toString());
-		System.out.println("\n"+ prod5.toString());
-		System.out.println("\n"+ prod6.toString());
+		//System.out.println("\n"+ prod3.toString());
+		//System.out.println("\n"+ prod4.toString());
+		//System.out.println("\n"+ prod5.toString());
+		//System.out.println("\n"+ prod6.toString());
 		
 		sc.close();
 	}
