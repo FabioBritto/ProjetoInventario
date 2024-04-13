@@ -1,5 +1,6 @@
 package inventario;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ProductTester {
@@ -8,11 +9,31 @@ public class ProductTester {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		int quantProdutos=0;
 		String tempName;
 		int tempNumber;
 		int tempQuantidade;
 		double tempPreco;
 		boolean ativo;
+		
+		do {
+			System.out.println("Por favor, insira uma quantidade positiva de produtos que deseja adicionar:");
+			quantProdutos = sc.nextInt();
+			try {
+				/*
+				 * Aqui eu verifico o valor lido de quantProdutos
+				 * Se o valor for igual a 0 eu LANÇO uma exeção
+				 */
+				if(quantProdutos == 0) {
+					throw new InputMismatchException("Insira um número maior que zero!");
+				}
+			}
+			catch(InputMismatchException e) {
+				System.out.println(e.getMessage());
+			}
+			
+		}while(quantProdutos <= 0);
+		
 		
 		
 		System.out.println("Por favor, digite o nome do Produto:");
