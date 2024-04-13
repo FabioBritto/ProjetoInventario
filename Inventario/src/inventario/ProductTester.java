@@ -9,7 +9,8 @@ public class ProductTester {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int quantProdutos=0;
+		
+		int maxSize=0;
 		String tempName;
 		int tempNumber;
 		int tempQuantidade;
@@ -17,22 +18,24 @@ public class ProductTester {
 		boolean ativo;
 		
 		do {
-			System.out.println("Por favor, insira uma quantidade positiva de produtos que deseja adicionar:");
-			quantProdutos = sc.nextInt();
+			System.out.println("Por favor, insira uma quantidade positiva de produtos que deseja adicionar:\n"
+							 + "Insira 0(zero) se não quiser adicionar produtos");
+			maxSize = sc.nextInt();
 			try {
 				/*
-				 * Aqui eu verifico o valor lido de quantProdutos
+				 * Aqui eu verifico o valor lido de maxSize
 				 * Se o valor for igual a 0 eu LANÇO uma exeção
 				 */
-				if(quantProdutos == 0) {
-					throw new InputMismatchException("Insira um número maior que zero!");
+				if(maxSize == 0) {
+					throw new InputMismatchException("Não vai adicionar"); //Arrumar a mensagem
 				}
 			}
 			catch(InputMismatchException e) {
 				System.out.println(e.getMessage());
+				break;
 			}
 			
-		}while(quantProdutos <= 0);
+		}while(maxSize <= 0);
 		
 		
 		
