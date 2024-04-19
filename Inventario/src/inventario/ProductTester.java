@@ -43,6 +43,7 @@ public class ProductTester {
 		produtos = new Produto[maxSize];
 		if(maxSize != 0) {
 			//produtos = new Produto[maxSize];
+			
 			for(int i = 0;i< produtos.length;i++) {
 				sc.nextLine();
 				System.out.println("Por favor, digite o nome do Produto:");
@@ -62,12 +63,13 @@ public class ProductTester {
 		else {
 			System.out.println("Não há produtos!");
 		}
-		for(Produto prod : produtos) {
-			System.out.println(prod);
-		}
+		displayInventory(produtos);
 		sc.close();
 	}
 	public static void displayInventory(Produto[] produto) {
+		for(Produto prod : produto) {
+			System.out.println(prod);
+		}
 		
 	}
 }
