@@ -26,6 +26,14 @@ public class Produto {
 		this.precoProduto = precoProduto;
 		this.ativo = true;
 	}
+	public void addToInventory(int quantidade) {
+		
+	}
+	public void deductFromInventory(int quantidade) {
+		
+	}
+	
+	
 	/**
 	 * Esses serão métodos ACESSADORES. Utilizo eles pra poder acessar valores.
 	 * 
@@ -67,6 +75,7 @@ public class Produto {
 	public void setAtivo(boolean ativo) {
 		this.ativo = ativo;
 	}
+	
 	public String toString() {
 		String status;
 		if(ativo == true) {
