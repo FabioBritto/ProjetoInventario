@@ -7,24 +7,26 @@ public class ProductTester {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-
-		Produto produtos[];
-		int maxSize;
-				
-		getMenuOption(sc);
+		int maxSize,menuOption;
 		
+		//Produto produtos[];
 		maxSize = getNumProducts(sc);
-		//Posso construir o ARRAY fora do if ou dentro
-		produtos = new Produto[maxSize];
-		if(maxSize != 0) {
-			
-			addToInventory(produtos,sc);
-
-		}
-		else {
+		
+		if(maxSize == 0) {
 			System.out.println("Não há produtos!");
 		}
-		displayInventory(produtos);
+		else {
+			Produto[] produto = new Produto[maxSize];
+			addToInventory(produto,sc);
+			do {
+				menuOption = getMenuOption(sc);
+				executeMenuChoice(menuOption,produto,sc);
+			}while(menuOption != 0);
+		}
+		/*
+		 * onde encaixo o displayInventory?
+		 */
+		//displayInventory(produto);
 		sc.close();
 	}
 	public static int getMenuOption(Scanner sc) {
@@ -152,5 +154,49 @@ public class ProductTester {
 				System.out.println(e.getMessage());
 			}
 		}while(updateValue <= 0);
+		produto[productChoice].addToInventory(updateValue);
+	}
+	public void deductInventory(Produto[] produto, Scanner sc) {
+		int productChoice;
+		int deductValue = -1;
+		
+		productChoice = getProductNumber(produto,sc);
+		do {
+			try {
+				System.out.println("Quantos produtos você acha que tem?");
+				deductValue = sc.nextInt();
+				if(deductValue < 0) {
+					throw new Exception("Por favor, insira um valor válido!");
+				}
+			}catch(Exception e) {
+				System.out.println(e.getMessage());
+			}
+		}while(deductValue < 0);
+		produto[productChoice].deductFromInventory(deductValue);
+	}
+	public void discontinueInventory(Produto[] produto, Scanner sc) {
+		int productChoice;
+		
+		productChoice = getProductNumber(produto,sc);
+		produto[productChoice].setAtivo(false);
+	}
+	public static void executeMenuChoice(int menuOption,Produto[] produto, Scanner sc) {
+		
+		switch (menuOption){
+		case 1:
+			System.out.println("EXIBIR LISTA DE PRODUTOS\n");
+			break;
+		case 2:
+			System.out.println("ADICIONAR ESTOQUE\n");
+			break;
+		case 3:
+			System.out.println("DEDUZIR ESTOQUE\n");
+			break;
+		case 4:
+			System.out.println("DESCONTINUAR ESTOQUE\n");
+			break;
+		default:
+			break;
+		}
 	}
 }

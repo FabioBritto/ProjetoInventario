@@ -27,10 +27,10 @@ public class Produto {
 		this.ativo = true;
 	}
 	public void addToInventory(int quantidade) {
-		
+		this.qtdeProduto = quantidade;
 	}
 	public void deductFromInventory(int quantidade) {
-		
+		//Não faz sentido eu alterar o valor de quantidade do estoque por uma DEDUÇÃO
 	}
 	
 	
