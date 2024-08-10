@@ -1,6 +1,6 @@
 # Inventário com Java
 
-Trabalho de conclusão do curso *JAVA Fundamentals* oferecido pela **ORACLE**.
+Trabalho de conclusão do curso *JAVA Fundamentals* oferecido pela **ORACLE** e cursado em ***Janeiro/2024***
 
 ## OBJETIVO DO PROJETO
 
@@ -9,6 +9,7 @@ O objetivo era aplicar os conhecimentos adquiridos durante o curso através do d
 O *JAVA Fundamentals* é o primeiro de uma lista de cursos oferecidos pela **ORACLE**.
 
 ![Trilha de Estudos de Java](img/Oracle-Academy-Java-Learning-Pathway.png)
+[Mais informações sobre o Java Fundamentals](https://academy.oracle.com/pt-br/solutions-curriculum-java.html#java1-tab)
 
 ## REQUISITOS DO PROJETO
 
