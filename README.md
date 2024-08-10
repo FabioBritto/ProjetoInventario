@@ -10,11 +10,7 @@ O *JAVA Fundamentals* é o primeiro de uma lista de cursos oferecidos pela **ORA
 
 ![Trilha de Estudos de Java](img/Oracle-Academy-Java-Learning-Pathway.png)
 
-<<<<<<< HEAD
-## REQUISITOS DO PROJETO:
-=======
-### REQUISITOS DO PROJETO
->>>>>>> 95e79279133d77e79d941e8c2a04d6a408930ad6
+## REQUISITOS DO PROJETO
 
 Como este é o curso introdutório de uma série de outros cursos sobre a linguagem, tudo foi apresentado de forma a orientar o aluno, portanto, as tarefas eram passadas de forma bem objetiva e instrutiva, para que que seja possível para o aluno desenvolver seguindo as boas práticas.
 
