@@ -1,6 +1,6 @@
 # Controle de Inventário/Estoque com Java
 
-Trabalho de conclusão do curso *JAVA Fundamentals* oferecido pela **ORACLE** e cursado em ***Janeiro/2024***
+Trabalho de conclusão do curso *JAVA Fundamentals* oferecido pela **ORACLE** e cursado em ***Janeiro/2024 até Abril/2024***
 
 ## OBJETIVO DO PROJETO
 
